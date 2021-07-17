@@ -3,5 +3,43 @@
 @import 'tailwindcss/utilities';
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@font-face {
+    font-family: 'BasisGrotesquePro';
+    font-style : normal;
+    font-weight: 400;
+    src        : url(../src/assets/fonts/BasisGrotesquePro-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'BasisGrotesquePro';
+    font-style : normal;
+    font-weight: 300;
+    src        : url(../src/assets/fonts/BasisGrotesquePro-Light.ttf);
+}
+
+@font-face {
+    font-family: 'BasisGrotesquePro';
+    font-style : normal;
+    font-weight: 500;
+    src        : url(../src/assets/fonts/BasisGrotesquePro-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'BasisGrotesquePro';
+    font-style : bold;
+    font-weight: 700;
+    src        : url(../src/assets/fonts/BasisGrotesquePro-Bold.ttf);
+}
+
+
+html,
+body {
+    height : 100%;
+    padding: 0;
+}
+
+body {
+    margin          : 0;
+    font-family     : "BasisGrotesquePro";
+    background-color: black;
+}
