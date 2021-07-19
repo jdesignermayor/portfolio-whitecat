@@ -9,21 +9,25 @@ import Scrollbar from 'smooth-scrollbar';
 })
 export class AppComponent {
   title = 'portfolio-whitecat';
+  isExpanded: boolean = true;
   @ViewChild('mainContainer') mainContainer: ElementRef | undefined;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
 
   }
 
+  getExpanded = (isExpanded: boolean) => {
+    this.isExpanded = isExpanded;
+  }
+
   ngAfterViewInit(): void {
-
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
-
     if (this.mainContainer) {
       Scrollbar.init(this.mainContainer.nativeElement, {
         plugins: {
-          overscroll: true
+          overscroll: true,
+          continuousScrolling: true,
+          renderByPixels: true,
+          damping: 0.1,
         }
       });
     } else {
