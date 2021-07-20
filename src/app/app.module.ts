@@ -10,7 +10,12 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { HeaderMenuToggleComponent } from './header-menu-toggle/header-menu-toggle.component';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
 
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -25,7 +30,8 @@ import { HeaderMenuToggleComponent } from './header-menu-toggle/header-menu-togg
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AngularSvgIconModule.forRoot()
+    AngularSvgIconModule.forRoot(),
+    LottieModule.forRoot({ player: playerFactory })
   ],
   providers: [],
   bootstrap: [AppComponent]

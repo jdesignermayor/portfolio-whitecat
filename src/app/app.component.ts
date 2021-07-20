@@ -9,7 +9,7 @@ import Scrollbar from 'smooth-scrollbar';
 })
 export class AppComponent {
   title = 'portfolio-whitecat';
-  isExpanded: boolean = true;
+  isExpanded: boolean = false;
   @ViewChild('mainContainer') mainContainer: ElementRef | undefined;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
@@ -23,11 +23,12 @@ export class AppComponent {
   ngAfterViewInit(): void {
     if (this.mainContainer) {
       Scrollbar.init(this.mainContainer.nativeElement, {
+        continuousScrolling: true,
+        renderByPixels: true,
+        thumbMinSize: 20,
+        damping: 0.05,
         plugins: {
-          overscroll: true,
-          continuousScrolling: true,
-          renderByPixels: true,
-          damping: 0.1,
+
         }
       });
     } else {

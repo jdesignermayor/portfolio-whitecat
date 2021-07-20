@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-introduction',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroductionComponent implements OnInit {
 
+  @ViewChild('videoAnimation') videoElement: ElementRef | undefined;
+  videoPath: string = "";
+
+  options: AnimationOptions = {
+    path: '../../assets/illustrations/whiteCat.mp4',
+  };
+
   constructor() { }
 
   ngOnInit(): void {
+    this.videoPath = "../../assets/illustrations/whiteCat.mp4";
+    setTimeout(() => {
+      this.videoElement?.nativeElement.play();
+    }, 1000)
   }
+
+  animationCreated(animationItem: AnimationItem): void {
+    console.log(animationItem);
+  }
+
+
+
 
 }
