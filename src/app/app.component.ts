@@ -9,7 +9,7 @@ import Scrollbar from 'smooth-scrollbar';
 })
 export class AppComponent {
   title = 'portfolio-whitecat';
-  isExpanded: boolean = true;
+  isExpanded: boolean = false;
   @ViewChild('mainContainer') mainContainer: ElementRef | undefined;
 
   constructor(@Inject(DOCUMENT) private document: Document) {

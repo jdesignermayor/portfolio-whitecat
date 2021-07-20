@@ -1,5 +1,5 @@
 <app-header [isExpandedInput]="isExpanded" (isExpandedOutput)="getExpanded($event)" class=""></app-header>
-<app-header-menu-toggle *ngIf="isExpanded"></app-header-menu-toggle>
+<app-header-menu-toggle *ngIf="isExpanded" class="lg:hidden"></app-header-menu-toggle>
 <div class="main-container scroll-content z-0" #mainContainer data-scrollbar>
     <router-outlet></router-outlet>
 </div>
