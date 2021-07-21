@@ -1,0 +1,9 @@
+<div class="md:mt-16 w-screen px-5 py-16 items-center">
+    <p class="mb-5">WORK</p>
+    <div class="text-5xl font-bold leading-10 mb-10">
+        <p class="animate__animated animate__fadeInDown">We build good products in record time</p>
+    </div>
+    <div *ngFor="let work of worklist;" class="mb-5">
+        <app-work-card [data]="work"></app-work-card>
+    </div>
+</div>
