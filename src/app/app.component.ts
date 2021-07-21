@@ -13,7 +13,6 @@ export class AppComponent {
   @ViewChild('mainContainer') mainContainer: ElementRef | undefined;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
-
   }
 
   getExpanded = (isExpanded: boolean) => {
@@ -27,12 +26,7 @@ export class AppComponent {
         renderByPixels: true,
         thumbMinSize: 20,
         damping: 0.05,
-        plugins: {
-
-        }
       });
-    } else {
-      alert("doenst work")
     }
   }
 }

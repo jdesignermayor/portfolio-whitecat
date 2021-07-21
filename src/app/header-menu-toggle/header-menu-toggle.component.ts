@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-header-menu-toggle',
@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderMenuToggleComponent implements OnInit {
 
+  @Input() isExpanded: boolean = true;
+  animateClass: string = "animate__animated animate__fadeIn";
   options: any = [];
-  constructor() { }
 
   ngOnInit(): void {
     this.options = [{
@@ -24,7 +25,7 @@ export class HeaderMenuToggleComponent implements OnInit {
       id: 0,
       title: 'Blog'
     }
-    ]
+    ];
   }
 
 }
