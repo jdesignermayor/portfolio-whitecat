@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderMenuToggleComponent } from './header-menu-toggle/header-menu-toggle.component';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { WorkComponent } from './work/work.component';
+import { WorkCardComponent } from './work-card/work-card.component';
 
 export function playerFactory() {
   return player;
@@ -23,7 +25,9 @@ export function playerFactory() {
     HeaderComponent,
     IntroductionComponent,
     HomeComponent,
-    HeaderMenuToggleComponent
+    HeaderMenuToggleComponent,
+    WorkComponent,
+    WorkCardComponent
   ],
   imports: [
     BrowserModule,
