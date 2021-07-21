@@ -11,6 +11,7 @@ export class IntroductionComponent implements OnInit {
 
   @ViewChild('videoAnimation') videoElement: ElementRef | undefined;
   videoPath: string = "";
+  classStyle: string = "";
 
   options: AnimationOptions = {
     path: '../../assets/illustrations/whiteCat.mp4',
@@ -21,6 +22,7 @@ export class IntroductionComponent implements OnInit {
   ngOnInit(): void {
     this.videoPath = "../../assets/illustrations/whiteCat.mp4";
     setTimeout(() => {
+      this.classStyle = "animate__animated animate__fadeIn";
       this.videoElement?.nativeElement.play();
     }, 1000)
   }

@@ -1,12 +1,12 @@
 <div class="container mt-24 md:mt-16 flex lg:grid-cols-2 h-full w-full text-white px-5 py-16 items-center top-1">
     <div class="w-full">
-        <div class="text-5xl font-bold leading-10">
-            <p>Development, <br> design, <br>
+        <div class="text-5xl font-bold leading-10 ">
+            <p class="animate__animated animate__fadeInDown">Development, <br> design, <br>
                 and quality experiences</p>
         </div>
         <div class="my-6">
             <a href="#"
-                class="bg-grey-light text-xl text-yellow-400 hover:bg-grey text-grey-darkest  inline-flex items-center">
+                class="bg-grey-light text-xl text-yellow-400 hover:bg-grey text-grey-darkest inline-flex items-center animate__animated animate__fadeInDown">
                 <span>Create something together</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -15,7 +15,7 @@
             </a>
         </div>
         <div class="flex w-full  object-center items-center justify-center">
-            <video loop muted playsinline #videoAnimation class="h-60v">
+            <video loop muted playsinline #videoAnimation class="h-60v {{classStyle}}">
                 <source [src]="videoPath" type="video/mp4">
             </video>
         </div>
