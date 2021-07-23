@@ -16,7 +16,7 @@
         </div>
     </ng-template>
     <ng-template #worklistTemplateEmpty>
-        <div class="flex flex-col justify-center items-center h-40v p-5">
+        <div class="flex flex-col justify-center items-center h-40v p-5 animate__animated animate__fadeIn">
             <h1 class="text-white">No hay proyectos por ahora :(</h1>
             <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
         </div>
