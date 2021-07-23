@@ -22,8 +22,8 @@ export class IntroductionComponent implements OnInit {
   ngOnInit(): void {
     this.videoPath = "../../assets/illustrations/whiteCat.mp4";
     setTimeout(() => {
-      this.classStyle = "animate__animated animate__fadeIn";
       this.videoElement?.nativeElement.play();
+      this.classStyle = "animate__animated animate__fadeIn";
     }, 1000)
   }
 
