@@ -1,0 +1,26 @@
+.chip {
+    display            : inline-block;
+    -webkit-user-select: none;
+    -moz-user-select   : none;
+    -ms-user-select    : none;
+    user-select        : none;
+    border-radius      : 25px;
+    position           : relative;
+    cursor             : pointer;
+    -webkit-transition : .2s;
+    transition         : .2s;
+    background-color   : black;
+    color              : #fff;
+    border             : 1px solid #fff;
+    font-size          : 16px;
+    padding            : 2px 22px;
+    margin             : 5px 15px 20px 0;
+    text-transform     : capitalize;
+    white-space        : nowrap;
+}
+
+.active {
+    background: #f3f2f6;
+    border    : 1px solid hsla(0, 0%, 73.3%, .27);
+    color     : black;
+}

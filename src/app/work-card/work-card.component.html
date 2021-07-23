@@ -1,6 +1,7 @@
-<div class="w-full h-50v p-2 bg-blue-400 rounded-md">
+<div class="w-full h-70v p-5 bg-blue-400 rounded-sm bg-cover"
+    [ngStyle]="{'background-image': 'url(' + work.imagePath + ')'}" [ngClass]="{'text-black': work.theme === 'dark'}">
     <div class="inline-block text-left align-text-bottom">
-        <h1 class="font-medium">{{ work.title }}</h1>
+        <h1 class="font-bold uppercase text-xl mb-1">{{ work.title }}</h1>
         <p>{{ work.description }}</p>
     </div>
 </div>
