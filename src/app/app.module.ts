@@ -14,6 +14,7 @@ import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { WorkComponent } from './work/work.component';
 import { WorkCardComponent } from './work-card/work-card.component';
+import { ServicesComponent } from './services/services.component';
 
 export function playerFactory() {
   return player;
@@ -27,7 +28,8 @@ export function playerFactory() {
     HomeComponent,
     HeaderMenuToggleComponent,
     WorkComponent,
-    WorkCardComponent
+    WorkCardComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

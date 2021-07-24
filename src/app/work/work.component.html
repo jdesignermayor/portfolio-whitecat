@@ -2,7 +2,7 @@
     <p class="mb-5 px-5 ">WORK</p>
     <div class="text-5xl font-bold mb-10">
         <p class="px-5">We build good products in record time</p>
-        <div class="flex flex-nowrap overflow-auto pt-9 px-5 leading-10">
+        <div class="flex flex-nowrap overflow-auto pt-9 px-5 leading-10 no-scrollbar">
             <div class="chip" *ngFor="let category of categories;" [ngClass]="{'active': category.active }"
                 (click)="activeChip(category)">
                 {{ category.title }}
